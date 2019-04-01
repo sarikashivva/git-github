@@ -1,0 +1,37 @@
+6. Define main method in Solution class.
+
+The program will read a String value. It will calculate total number of vowels in that string and print the answer.
+
+Sample input:
+
+internal
+
+Output:
+
+3
+
+Solution:
+package ass1;
+import java.util.*;
+public class sixth {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int vowels=0;
+		String st=new String();
+		Scanner sc=new Scanner(System.in);
+		st=sc.nextLine();
+		char[] ch=new char[st.length()];
+		ch=st.toCharArray();
+		for(int i=0;i<st.length();i++)
+		{
+			if(ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u' || ch[i]=='A' || ch[i]=='E' || ch[i]=='I' || ch[i]=='O' || ch[i]=='U')
+				vowels++;
+		}
+		System.out.println(vowels);
+		sc.close();
+
+	}
+
+}
+

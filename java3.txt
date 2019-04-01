@@ -1,0 +1,41 @@
+3. Create Solution class with main method. 
+Read a String value using Scanner. 
+The program should print the count of upper case and lower case alphabet characters in that String (print output in separate lines).
+Consider below sample input and output:
+
+Input:
+DaTa#abC123
+
+Output:
+3
+4
+
+Solution:
+package ass1;
+import java.util.*;
+public class third {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int small=0,large=0;
+		Scanner sc=new Scanner(System.in);
+		String s=new String();
+		s=sc.nextLine();
+		char[] ch=new char[s.length()];
+		ch=s.toCharArray();
+		for(int i=0;i<s.length();i++)
+		{
+			if(ch[i]>='a' && ch[i]<='z')
+				small++;
+		}
+		for(int i=0;i<s.length();i++)
+		{
+			if(ch[i]>='A' && ch[i]<='Z')
+				large++;
+		}
+		System.out.println(large);
+		System.out.println(small);
+		sc.close();
+	}
+
+}

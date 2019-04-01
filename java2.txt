@@ -1,0 +1,30 @@
+2. Create Solution class with main method.
+Read a String value using Scanner.
+The program should print largest and smallest character (as per ASCII sqeuence) together. 
+Consider below sample input and output (Output refers 'o' as largest and 'P' as smallest as we are following ASCII sequence):
+
+Input:
+Phone
+
+Output:
+oP
+
+Solution:
+package ass1;
+import java.util.*;
+public class second {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String s=new String();
+		s=sc.nextLine();
+		char[] ch=new char[s.length()];
+		ch=s.toCharArray();
+		Arrays.sort(ch);
+		System.out.print(ch[s.length()-1]);
+		System.out.print(ch[0]);
+		sc.close();
+	}
+	
+}

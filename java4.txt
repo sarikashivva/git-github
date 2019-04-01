@@ -1,0 +1,34 @@
+4.Create Solution class with main method. 
+Read a String value using Scanner. 
+The program should print sum of digits in that String. Input String may have non digit characters too, which should be ignored.
+Consider below sample input and output:
+
+Input:
+DaTa#abC123ww
+
+Output:
+6
+
+Solution:
+package ass1;
+import java.util.*;
+public class fourth {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int sum=0;
+		Scanner sc=new Scanner(System.in);
+		String s=new String();
+		s=sc.nextLine();
+		char[] ch=new char[s.length()];
+		ch=s.toCharArray();
+		for(int i=0;i<s.length();i++)
+		{
+			if(ch[i]>='1' && ch[i]<='9')
+				sum=sum+ch[i]-48;
+		}
+		System.out.println(sum);
+		sc.close();
+	}
+
+}
