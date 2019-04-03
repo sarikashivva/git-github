@@ -1,0 +1,90 @@
+package ass5;
+
+public class Library {
+	private int id;
+	private String name;
+	private String add;
+	public Library(int id, String name, String add) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.add = add;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAdd() {
+		return add;
+	}
+	public void setAdd(String add) {
+		this.add = add;
+	}
+
+	
+}
+
+package ass5;
+import java.util.*;
+public class LibraryDemo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int[] a=new   int[5];
+		String b[] = new String[5];
+		String c[] = new String[5];
+		for(int i=0;i<5;i++)
+		{
+			a[i]=sc.nextInt();sc.nextLine();
+			b[i]=sc.nextLine();
+			c[i]=sc.nextLine();
+		}
+		Library l1=new Library(a[0],b[0],c[0]);
+
+		Library l2=new Library(a[1],b[1],c[1]);
+
+		Library l3=new Library(a[2],b[2],c[2]);
+
+		Library l4=new Library(a[3],b[3],c[3]);
+
+		Library l5=new Library(a[4],b[4],c[4]);
+		
+		Library[] arr= {l1,l2,l3,l4,l5};
+		Library[] res=sortObjectById(arr);
+		System.out.println("The output after sorting is:");
+		for(Library l:res)
+		{
+			System.out.println(l.getId()+" "+l.getName()+" "+l.getAdd());
+		}
+		sc.close();
+
+	}
+	public static Library[] sortObjectById(Library[] arr) {
+		for(int i=0;i<5;i++)
+		{
+			for(int j=i;j<5;j++)
+			{
+				if(arr[i].getAdd().compareTo(arr[j].getAdd())>0)
+				{
+					Library temp;
+					temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+		}
+		return arr;
+		
+	}
+
+}
+
