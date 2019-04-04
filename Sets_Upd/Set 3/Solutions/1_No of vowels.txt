@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner sc = new Scanner(System.in);
+        
+       String str = sc.nextLine();
+        
+        int code = 0;
+        
+        for(int i = 0;i<str.length();i++)
+        {
+            char c = str.toLowerCase().charAt(i);
+            
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
+                code++;
+        }
+        
+        System.out.println(code);
+    }
+}
